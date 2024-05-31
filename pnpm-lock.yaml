@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@solidjs/router':
-        specifier: ^0.13.3
-        version: 0.13.3(solid-js@1.8.11)
+        specifier: ^0.13.5
+        version: 0.13.5(solid-js@1.8.11)
       '@tauri-apps/api':
         specifier: ^1.5.6
         version: 1.5.6
@@ -547,8 +547,8 @@ packages:
     peerDependencies:
       solid-js: ^1.6.12
 
-  '@solidjs/router@0.13.3':
-    resolution: {integrity: sha512-p8zznlvnN3KySMXqT8irhubgDNTETNa/guaGHU/cZl7kuiPO3PmkWNYfoNCygtEpoxLmLpf62/ZKeyhFdZexsw==}
+  '@solidjs/router@0.13.5':
+    resolution: {integrity: sha512-I/bR5ZHCz2Dx80qL+6uGwSdclqXRqoT49SJ5cvLbOuT3HnYysSIxSfULCTWUMLFVcgPh5GrdHV6KwEoyrbPZZA==}
     peerDependencies:
       solid-js: ^1.8.6
 
@@ -1565,7 +1565,7 @@ snapshots:
     dependencies:
       solid-js: 1.8.11
 
-  '@solidjs/router@0.13.3(solid-js@1.8.11)':
+  '@solidjs/router@0.13.5(solid-js@1.8.11)':
     dependencies:
       solid-js: 1.8.11
 
