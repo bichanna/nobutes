@@ -82,7 +82,7 @@ pub fn modify_note(
 }
 
 pub fn get_note(conn: &Connection, id: usize) -> Result<Note, rusqlite::Error> {
-    let mut stmt = conn.prepare("SELECT id, name, title FROM notes WHERE id = ?1")?;
+    let mut stmt = conn.prepare("SELECT id, title, body FROM notes WHERE id = ?1")?;
     stmt.query_row((id,), |row| {
         Ok(Note {
             id: row.get(0)?,
@@ -93,7 +93,7 @@ pub fn get_note(conn: &Connection, id: usize) -> Result<Note, rusqlite::Error> {
 }
 
 pub fn get_notes(conn: &Connection) -> Result<Vec<Note>, rusqlite::Error> {
-    let mut stmt = conn.prepare("SELECT id, name, title FROM notes")?;
+    let mut stmt = conn.prepare("SELECT id, title, body FROM notes")?;
     let notes = stmt.query_map([], |row| {
         Ok(Note {
             id: row.get(0)?,
