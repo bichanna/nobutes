@@ -3,22 +3,13 @@ import { Router, Route } from '@solidjs/router';
 
 import './index.css';
 import Notes from './pages/Notes';
-
-function Placeholder() {
-  return <p>Placeholder</p>;
-}
-
-function Root(props) {
-  return <div class='m-5'>
-    {props.children}
-  </div>;
-}
+import Note from './pages/Note';
 
 function App () {
   return (
-    <Router root={Root}>
+    <Router>
       <Route path="/" component={Notes} />
-      <Route path="/note/:id" component={Placeholder} />
+      <Route path="/note/:id" component={Note} />
     </Router>
   );
 }
